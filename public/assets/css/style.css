@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color: var(--color-main);
     color: var(--color-second);
+    box-sizing: border-box;
 }
 
 .container {
@@ -14,13 +15,17 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--color-third);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container a {
+    color: var(--color-sixth);
+    text-decoration: none;
 }
 
 header {
     background-color: #333;
-    color: #fff;
     padding-top: 30px;
     min-height: 70px;
     border-bottom: 3px solid #e8491d;
@@ -29,10 +34,15 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 4em;
     font-family: "UnifrakturMaguntia", cursive;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
+}
+
+header a{
+    color: var(--color-second);
+    text-decoration: none;
 }
 
 nav {
@@ -81,6 +91,7 @@ nav a:hover {
 .imagem-destaque img {
     max-width: 100%;
     height: auto;
+    max-height: 300px;
     border: 1px solid #ccc;
 }
 
@@ -114,9 +125,176 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
+    bottom: 0; 
+}
+
+/* Estrutura do Menu */
+.social-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+/* Estilização dos Links/Botões */
+.social-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 50%; /* Deixa redondo */
+    font-size: 22px; /* Tamanho do ícone */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transição suave para o hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito Hover Geral (Levantar e mudar a cor do texto para branco) */
+.social-menu a:hover {
+    transform: translateY(-5px); /* Move o ícone para cima */
+    color: #ffffff;
+}
+
+/* Cores específicas de cada marca no Hover */
+.social-menu a.icon-facebook:hover {
+    background-color: #0077b5;
+}
+
+.social-menu a.icon-github:hover {
+    background-color: #24292e;
+}
+
+.social-menu a.icon-instagram:hover {
+    background-color: #e1306c;
+}
+
+.social-menu a.icon-youtube:hover {
+    background-color: #e1303c;
+}
+
+.social-menu a.icon-threads:hover {
+    background-color: #000000;
+}
+
+/* Container Flex que coloca as redes sociais e o formulário lado a lado */
+.bloco-flex-contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Espaço horizontal entre as duas colunas */
+    margin-bottom: 30px;
+}
+
+/* Define que cada lado vai ocupar metade do espaço disponível */
+.contato-info, 
+.secao-formulario {
+    flex: 1;
+    min-width: 280px; /* Impede que fiquem esmagados em telas menores */
+}
+
+/* Ajuste nos espaçamentos da lista de contatos para combinar com o formulário */
+.contato-info p {
+    margin-bottom: 20px;
+}
+
+.contato-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato-info > ul > li {
+    margin-bottom: 15px;
+}
+
+/* Janela de contato integrada ao layout (sem fixed, sem right, sem bottom) */
+.janela-contato {
+    width: 100%; /* Ocupa todo o espaço da sua coluna designada */
+    background-color: var(--color-third);
+    border: 2px solid var(--color-second);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Corpo e campos internos */
+.corpo-contato {
+    padding: 20px;
+}
+
+.campo-contato {
+    margin-bottom: 12px;
+}
+
+.campo-contato label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-second);
+}
+
+/* Estilização dos inputs, select e textarea */
+.campo-contato input,
+.campo-contato select,
+.campo-contato textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+    color: #333333;
+    transition: border-color 0.3s;
+}
+
+.campo-contato select {
     width: 100%;
+}
+
+.campo-contato textarea {
+    resize: none;
+}
+
+.campo-contato input:focus,
+.campo-contato select:focus,
+.campo-contato textarea:focus {
+    border-color: var(--color-sixth);
+}
+
+/* Botão de envio */
+.botao-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-sixth);
+    color: var(--color-third);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 5px;
+}
+
+.botao-enviar:hover {
+    filter: brightness(1.2);
+    transform: scale(1.01);
+}
+
+/* RESPONSIVIDADE: Em celulares, joga o formulário para baixo das redes sociais */
+@media (max-width: 768px) {
+    .bloco-flex-contato {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contato-info, 
+    .secao-formulario {
+        width: 100%;
+    }
 }

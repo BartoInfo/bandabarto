@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=UnifrakturMaguntia&display=swap');
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+
 :root{
     --color-main: #000000;
     --color-second: #FFFFFF;
     --color-third: #494949;
     --color-fourth: #7C7A7A;
     --color-fifth: #FF5D73;
+    --color-sixth: #e6ca4e;
 }
 
 :root[data-theme="dark"]{
@@ -14,4 +18,5 @@
     --color-third: #bfbfbf;
     --color-fourth: #d9d4d4;
     --color-fifth: #625dff;
+    --color-sixth: #4e67e6;
 }

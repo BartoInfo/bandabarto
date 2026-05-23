@@ -1,48 +1,82 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contato - Banda Barto</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Banda Barto</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-<header>
-<h1>Banda Barto</h1>
-</header>
-<nav>
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="sobre.html">História</a></li>
-<li><a href="galeria.html">Galeria</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</nav>
-<div class="container">
-<section class="pagina-titulo">
-<h2>Entre em Contato Conosco</h2>
-</section>
-<section class="contato-info">
-<p>Se você tem alguma pergunta, quer nos contratar para um show ou simplesmente trocar uma ideia, entre em contato!</p>
-<ul>
-<li><strong>Email:</strong> <a href="mailto:seuemail@bandabarto.com">seuemail@bandabarto.com</a></li>
-<li><strong>Telefone:</strong> [Seu Telefone]</li>
-<li><strong>Redes Sociais:</strong>
-<ul>
-<li><a href="SEU_LINK_FACEBOOK" target="_blank">Facebook</a></li>
-<li><a href="SEU_LINK_INSTAGRAM" target="_blank">Instagram</a></li>
-<li><a href="SEU_LINK_YOUTUBE" target="_blank">YouTube</a></li>
-</ul>
-</li>
-</ul>
-</section>
-<section class="imagem-destaque">
-<img src="IMAGEM_CONTATO.jpg" alt="Banda Barto - Contato">
-</section>
-</div>
-<footer>
-<p>&copy; 2025 Banda Barto. Todos os direitos reservados.</p>
-</footer>
+    <header>
+        <h1><a href="./index.html">Banda Barto</a></h1>
+    </header>
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">História</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container bloco-flex-contato">
+                <section class="contato-info">
+                    <h2>Entre em Contato Conosco</h2>
+                    <p>Se você tem alguma pergunta, quer nos contratar para um show ou simplesmente trocar uma ideia, entre em contato!</p>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:seuemail@bandabarto.com">seuemail@bandabarto.com</a></li>
+                        <li><strong>Telefone:</strong> [Seu Telefone]</li>
+                        <li><strong>Redes Sociais:</strong>
+                            <ul class="social-menu">
+                                <li><a href="#" target="_blank" class="icon-facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank" class="icon-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank" class="icon-youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+        
+                <section class="secao-formulario">
+                    <div class="janela-contato">
+                        <!-- O form permanece exatamente igual ao seu original -->
+                        <form action="#" method="POST" class="corpo-contato">
+                            <div class="campo-contato">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="campo-contato">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="campo-contato">
+                                <label for="assunto">Assunto</label>
+                                <select id="assunto" name="assunto" required>
+                                    <option value="" disabled selected>Escolha o motivo</option>
+                                    <option value="suporte">Suporte</option>
+                                    <option value="comercial">Comercial</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="campo-contato">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                            </div>
+                            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </section>
+        
+            </div> <!-- FIM DO BLOCO FLEX -->
+        
+            <section class="imagem-destaque">
+                <img src="IMAGEM_CONTATO.jpg" alt="Banda Barto - Contato">
+            </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Banda Barto. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
